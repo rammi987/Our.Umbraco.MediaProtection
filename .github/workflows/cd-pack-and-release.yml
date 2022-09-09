@@ -26,14 +26,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: set version from workflow_dispatch
-      if: github.event_name == 'workflow_dispatch'
-      run: |
-        echo "VERSION=${{ github.event.inputs.version }}" >> $GITHUB_ENV
-        echo "PRE_RELEASE='${{ github.event.inputs.prerelease }}'" >> $GITHUB_ENV
-
     - name: set version from release
-      if: github.event_name == 'release'
       run: |
         echo "VERSION=${{ github.event.release.tag_name }}" >> $GITHUB_ENV
         echo "PRE_RELEASE=${{ github.event.release.prerelease }}" >> $GITHUB_ENV
@@ -66,4 +59,4 @@ jobs:
 
     - name: Push
       run: dotnet nuget push ./*.${{env.VERSION}}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
-      if: github.event_name == 'release'
+    
