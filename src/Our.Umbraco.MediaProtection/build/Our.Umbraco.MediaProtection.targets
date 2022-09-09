@@ -1,0 +1,21 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <OurUmbracoMediaProtectionContentFilesPath>$(MSBuildThisFileDirectory)..\App_Plugins\Our.Umbraco.MediaProtection\**\*.*</OurUmbracoMediaProtectionContentFilesPath>
+    </PropertyGroup>
+
+    <Target Name="CopyOurUmbracoMediaProtectionAssets" BeforeTargets="Build">
+        <ItemGroup>
+            <OurUmbracoMediaProtectionContentFiles Include="$(OurUmbracoMediaProtectionContentFilesPath)" />
+        </ItemGroup>
+        <Message Text="Copying Our.Umbraco.MediaProtection files: $(OurUmbracoMediaProtectionContentFilesPath) - #@(OurUmbracoMediaProtectionContentFiles->Count()) files" Importance="high" />
+        <Copy SourceFiles="@(OurUmbracoMediaProtectionContentFiles)" DestinationFiles="@(OurUmbracoMediaProtectionContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\Our.Umbraco.MediaProtection\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    </Target>
+    
+        <Target Name="ClearOurUmbracoMediaProtectionAssets" BeforeTargets="Clean">
+            <ItemGroup>
+                <OurUmbracoMediaProtectionDir Include="$(MSBuildProjectDirectory)\App_Plugins\Our.Umbraco.MediaProtection\" />
+            </ItemGroup>
+            <Message Text="Clear old Our.Umbraco.MediaProtection data" Importance="high" />
+            <RemoveDir Directories="@(OurUmbracoMediaProtectionDir)" />
+        </Target>
+</Project>

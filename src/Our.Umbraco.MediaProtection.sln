@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Our.Umbraco.MediaProtection", "Our.Umbraco.MediaProtection\Our.Umbraco.MediaProtection.csproj", "{54C6E26D-13DD-42B9-B818-94B6C1602A7E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{7E37D1DE-9976-48A3-AEEF-0E64FEB606F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Our.Umbraco.MediaProtection.Website", "Our.Umbraco.MediaProtection.Website\Our.Umbraco.MediaProtection.Website.csproj", "{2D6EC928-9656-4E09-B51B-E4C416EE7D7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54C6E26D-13DD-42B9-B818-94B6C1602A7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54C6E26D-13DD-42B9-B818-94B6C1602A7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54C6E26D-13DD-42B9-B818-94B6C1602A7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54C6E26D-13DD-42B9-B818-94B6C1602A7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D6EC928-9656-4E09-B51B-E4C416EE7D7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D6EC928-9656-4E09-B51B-E4C416EE7D7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D6EC928-9656-4E09-B51B-E4C416EE7D7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D6EC928-9656-4E09-B51B-E4C416EE7D7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2D6EC928-9656-4E09-B51B-E4C416EE7D7C} = {7E37D1DE-9976-48A3-AEEF-0E64FEB606F1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {405DD307-F5E3-4027-B3B1-5CBC54045B19}
+	EndGlobalSection
+EndGlobal

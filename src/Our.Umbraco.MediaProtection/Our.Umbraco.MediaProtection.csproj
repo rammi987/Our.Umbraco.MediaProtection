@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ContentTargetFolders>.</ContentTargetFolders>
+    <Product>Our.Umbraco.MediaProtection</Product>
+    <PackageId>Our.Umbraco.MediaProtection</PackageId>
+    <Title>Our.Umbraco.MediaProtection</Title>
+    <Description>This prevents bad actors from manipulating processing parameters and DOS your site by requesting a large amount of slightly different image URLs that all need to process the image (a potentially CPU and memory expensive process). These processed images are then also saved to the ImageSharp cache (stored in umbraco\Data\TEMP\MediaCache by default), which doesn't have a built-in way to clean up old/infrequently used files and could therefore fill up your disk.</Description>
+    <PackageTags>umbraco plugin package</PackageTags>
+    <Copyright>MIT</Copyright>
+    <PackageProjectUrl>https://github.com/rammi987/Our.Umbraco.MediaProtection</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/rammi987/Our.Umbraco.MediaProtection</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Umbraco.Cms.Web.Website" Version="10.2.0" />
+    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="10.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="build\**">
+      <Pack>true</Pack>
+      <PackagePath>buildTransitive</PackagePath>
+    </None>
+  </ItemGroup>
+</Project>
