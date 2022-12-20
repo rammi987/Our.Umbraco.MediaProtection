@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <ContentTargetFolders>.</ContentTargetFolders>
     <Product>Our.Umbraco.MediaProtection</Product>
     <PackageId>Our.Umbraco.MediaProtection</PackageId>
@@ -15,8 +15,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Umbraco.Cms.Web.Website" Version="10.0.0" />
-    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="10.0.0" />
+    <PackageReference Include="Umbraco.Cms.Imaging.ImageSharp" Version="11.0.0" />
+    <PackageReference Include="Umbraco.Cms.Web.Website" Version="11.0.0" />
+    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="11.0.0" />
   </ItemGroup>
 
   <ItemGroup>
